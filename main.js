@@ -1,4 +1,5 @@
 const { app, BrowserWindow } = require("electron");
+const path = require('path')
 
 function createWindow() {
   // Create the browser window.
@@ -8,6 +9,7 @@ function createWindow() {
     webPreferences: {
       nodeIntegration: true,
       enableRemoteModule: true,
+      // preload: path.join(__dirname, 'preload.js')
     },
   });
 
@@ -20,8 +22,9 @@ function createWindow() {
   win.loadURL("http://localhost:3000");
 
   // Open the DevTools.
-  win.webContents.openDevTools();
+  // win.webContents.openDevTools();
 }
+if (require('electron-squirrel-startup')) app.quit();
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.

@@ -17,15 +17,13 @@
   "scripts": {
     "start-e": "electron-forge start",
     "start": "react-scripts start",
-    "st": "npm run start-o && npm run start",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
+    "start-f": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make"
   },
-  "eslintConfig": {
-    "extends": "calculator"
-  },
+
   "browserslist": {
     "production": [
       ">0.2%",
@@ -50,7 +48,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yuurha12"
+    "url": "https://github.com/yuurha12/calculator-precompile"
   },
   "keywords": [
     "math"
